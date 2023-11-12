@@ -8,7 +8,7 @@ const refs = {
     formEl: document.getElementById('search-form'),
     galleryEl: document.querySelector('.gallery'),
     queryBtn: document.querySelector('.form-btn'),
-    loabMoreBtn: document.querySelector('.load-more')
+    loadMoreBtn: document.querySelector('.load-more')
 }
 let searchQuery = '';
 let page = 1;
@@ -25,8 +25,8 @@ async function submitBtnHandler(event) {
 
     if (!searchQuery.trim()) {
         return Notiflix.Notify.warning('Please enter your request', {
-            distance:'90px',
-            position:"cenrater-top"
+            distance: '90px',
+            position: "cenrater-top"
         })
     }
 
