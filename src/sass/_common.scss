@@ -1,1 +1,38 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #edf0ff;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 20px;
+    border: 1px solid #fafafa;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  .is-hidden {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
