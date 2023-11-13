@@ -65,8 +65,10 @@ async function loadMoreBtnHandler() {
     refs.galleryEl.insertAdjacentHTML('beforeend', createGalleryMarkup(queryData.hits));
 
     if (page * 40 >= queryData.totalHits) {
-      refs.loadMoreBtn.classList.add('is-hidden');
+      refs.loadMoreBtn.classList.add('is-hidden'),
+       Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
     }
+    
 
     gallery.refresh();
   } catch { failureResponse() }
@@ -77,3 +79,4 @@ function failureResponse() {
     'Sorry, there are no images matching your search query. Please try again.'
   );
 }
+
