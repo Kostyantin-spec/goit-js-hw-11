@@ -37,7 +37,7 @@ async function submitBtnHandler(event) {
     if (!queryData || queryData.hits.length === 0) {
       return failureResponse();
     };
-    if (queryData.hits.length > 0) {
+    if (queryData.hits.length >= 40) {
       Notiflix.Notify.success(`You have received ${queryData.totalHits} images`, {
         distance: '90px',
         position: "center-top"
