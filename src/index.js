@@ -45,9 +45,12 @@ async function submitBtnHandler(event) {
     };
 
     if (queryData.hits.length < 40) {
-      refs.loadMoreBtn.classList.add('is-hidden');
+      refs.loadMoreBtn.classList.add('is-hidden'), 
+      Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+      
     } else {
-      refs.loadMoreBtn.classList.remove('is-hidden');
+      refs.loadMoreBtn.classList.remove('is-hidden'); 
+     
     };
 
     refs.galleryEl.innerHTML = createGalleryMarkup(queryData.hits);
@@ -67,6 +70,7 @@ async function loadMoreBtnHandler() {
     if (page * 40 >= queryData.totalHits) {
       refs.loadMoreBtn.classList.add('is-hidden'),
        Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.");
+       return;
     }
     
 
